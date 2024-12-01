@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Photo Album</title>
+    <link rel="stylesheet" href="./style.css" />
+<!-- 
+    <script src="./lib/axios/dist/axios.standalone.js"></script>
+    <script src="./lib/CryptoJS/rollups/sha256.js"></script>
+    <script src="./lib/CryptoJS/rollups/crypto-js.js"></script>
+    <script src="./lib/CryptoJS/components/hmac.js"></script>
+    <script src="./lib/CryptoJS/components/enc-base64.js"></script>
+    <script src="./lib/url-template/url-template.js"></script>
+    <script src="./lib/apiGatewayCore/sigV4Client.js"></script>
+    <script src="./lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script src="./lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script src="./lib/apiGatewayCore/sigV4Client.js"></script>
+    <script src="./lib/apiGatewayCore/utils.js"></script>
+
+    <script src="./apigClient.js"></script> -->
+
+
+
+    <script type="text/javascript" src="lib/axios/dist/axios.standalone.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/crypto-js.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/rollups/sha256.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/hmac.js"></script>
+    <script type="text/javascript" src="lib/CryptoJS/components/enc-base64.js"></script>
+    <script type="text/javascript" src="lib/url-template/url-template.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/sigV4Client.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/apiGatewayClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/simpleHttpClient.js"></script>
+    <script type="text/javascript" src="lib/apiGatewayCore/utils.js"></script>
+    <script type="text/javascript" src="apigClient.js"></script>
+
+
+
+  </head>
+  <body>
+    <!-- Search Section -->
+    <div class="search-section">
+      <h2>Search Photos</h2>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search photos..." />
+        <button onclick="searchPhotos()">Search</button>
+      </div>
+      <div id="searchResults" class="results-grid"></div>
+    </div>
+
+    <!-- Upload Section -->
+    <div class="upload-section">
+      <h2>Upload Photo</h2>
+      <div class="upload-container">
+        <input type="file" id="photoInput" accept="image/*" />
+        <input
+          type="text"
+          id="customLabels"
+          placeholder="Custom labels (comma-separated)"
+        />
+        <button onclick="uploadPhoto()">Upload</button>
+      </div>
+      <div id="uploadStatus"></div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
