@@ -1,0 +1,29 @@
+version: 0.2
+
+env:
+  variables:
+    PROCESSED_FILES_DIR: ""
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+
+  build:
+    commands:
+      - mkdir processed
+      - pwd
+      - cp -R ./Frontend/. processed/
+      - cd processed
+      - ls
+  post_build:
+    commands:
+      - pwd
+      - ls
+      - cd ..
+      - pwd
+      - aws s3 cp processed s3://photo-album-1-frontend --recursive
+
+artifacts:
+  files:
+    - processed/**
