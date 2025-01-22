@@ -1,7 +1,7 @@
 # photo-album
 The app is a scalable and cloud hosted photo album on AWS.
 
-AWS Tech:
+AWS Services:
 - S3
 - Lambda
 - Lex
